@@ -1,0 +1,30 @@
+One To one relation users x user_address
+One To Many / Many To One photos x users => Many photos to one user
+Many Yo Many => users x hashtags
+
+Execute src/database/CreateTables.sql in your sql worbench
+
+~
+
+Available routes:
+
+POST
+/users - to create a new user
+/photos - to create a new photo for a user
+/hashtags - to create a new hashtag or associate an existing one with an existing user
+/address/:userId - to set a address for user
+
+GET
+/users/getBetweenTwoValues - Set two params, like: /users/getBetweenTwoValues?id1=10&id2=20
+/users/hashtag/:hashtag - To see all users using that hashtag
+/users/allinfo/:id - To see all information about a user
+/hashtags/:userId - To see all user hashtags
+/photos/:userId - To see all user photos
+
+PUT
+/users/:id - To update a user
+/address/:userId - To update a user address  
+
+
+DELETE  
+/photos/:id - To delete a user photo
